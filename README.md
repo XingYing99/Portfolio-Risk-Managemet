@@ -1,8 +1,8 @@
 # Portfolio-Risk-Managemet
 
-Question 1
+### Question 1
 
-Comparison of returns
+#### Compare the risk and return performance of 4 portfolios (best, worst, and your portfolio before/after subjective adjustment) until 2020 October. 
 
 The table below reports the monthly returns for each of the first 10 months of 2020.
  
@@ -29,17 +29,25 @@ Similar to the monthly returns graph, the annualised standard deviations of the 
 
 After subjective adjustment, our portfolio had a higher annualised standard deviation of 26.987472, a slight increase compared to that before subjective adjustment. 
 
-Question 2
-Returns analysis
+### Question 2
+
+#### Returns analysis
+
 Similar trends are observed for all our best, worst and optimal portfolios. Sharp drops are observed in March and September 2020 whereas sharp peaks are observed in April and August 2020. The sudden decline in March 2020 is consistent with our expectations due to the sudden spread of the COVID-19 pandemic which caused high volatility in market sentiments and investors to be bearish. Hence, low market sentiments would have accounted for a large decline in stock prices, which translates to a fall in returns for all 3 portfolios. However, the extent of the fall in log returns for our optimal portfolio is much larger as compared to the best and worst portfolios which is inconsistent with our expectations. This may be because of the smaller number of stock holdings in our optimal portfolio as compared to the best and worst portfolios. Hence, less diversification within our optimal portfolio may result in the underperformance reflected here.
+
 The peak in April 2020 is also consistent with our expectations as the widespread lockdown of countries have prompted many to switch to remote working. Hence, we expected that technology stocks will rise due to optimistic analyst reports highlighting that the increase in purchase of conferencing software and technological devices as a result of remote working will induce a spike in technological stock prices. The peak in log returns for our optimal portfolio is on par with the best portfolio which is inconsistent with our expectations because we expected log returns of our optimised portfolio to be the highest. This may be because of the smaller number of stock holdings in our optimal portfolio as compared to the best portfolio. Hence, less diversification within our optimal portfolio may result in the slightly lower returns as compared to the best portfolio.
-However, we did not expect the sudden peak in returns from July to August 2020 and a sudden drop in September 2020 for all 3 portfolios because we expected the pandemic situation to have stabilised after the first half of the year. In addition, our optimal portfolio’s peak in August is still lower than the best portfolio. This may be due to the lower number of holdings within our optimal portfolio. Nevertheless, our optimal portfolio’s trough is the lowest among all 3 portfolios which is consistent with our expectation — that our optimal portfolio should optimise returns as much as possible.  
+
+However, we did not expect the sudden peak in returns from July to August 2020 and a sudden drop in September 2020 for all 3 portfolios because we expected the pandemic situation to have stabilised after the first half of the year. In addition, our optimal portfolio’s peak in August is still lower than the best portfolio. This may be due to the lower number of holdings within our optimal portfolio. Nevertheless, our optimal portfolio’s trough is the lowest among all 3 portfolios which is consistent with our expectation — that our optimal portfolio should optimise returns as much as possible.
+
 Comparing our returns in October 2020, although our adjustments have improved the returns for our optimal portfolio after taking analyst reports into account, both are still lower than that of the best and worst portfolios. Since our adjustments are made based on the latest reports in 2020, we are expecting the effects of these adjustments to be reflected over a longer horizon. Hence, the value for October 2020 alone may not reflect the true effect of the adjustments in weights and may undervalue the actual change in our portfolio log returns.
 Risk analysis
+
 Comparing the annualised standard deviation (SD) for each month for all 3 portfolios, the sudden peak in volatility in March is expected due to the COVID-19 pandemic which peaked in March 2020. We expected a significantly higher standard deviation in our optimal portfolio since we are aggressive investors who seek high returns, thus the fact that our optimal portfolio has the highest volatility among all other portfolios is consistent with our expectations.
 Comparing our annualised SD in October 2020, although our adjustments have increased the SD for our optimal portfolio after taking analyst reports into account, both are still lower than that of the best portfolio. It is also consistent with our expectations since we are willing to bear higher risks for higher returns in October 2020. Hence, since our subjective adjustments place more emphasis on maximising returns rather than minimising volatility, an increase in SD is expected. 
-Question 3
 
+### Question 3
+
+#### Analyse the outcome of the decisions made by the fund managers on the actual stocks. 
 Best Fund (FSPTX)
 Comparing the number of shares of the top 30 stocks originally (from the holdings in 2019) with the new number of shares of the same top 30 stocks (from the holdings in 2020), we can see that FSPTX has changed the weights of multiple stocks.The adjusted new holdings on 31 September 2020 (Chart 1) for FSPTX is shown below. 
 
@@ -68,8 +76,8 @@ A significant change from the old to the new holdings is that FDMAX decreased th
 
 ![image](https://user-images.githubusercontent.com/71431944/157257185-487ee1e1-aaaf-4508-87dc-8ea45390a784.png)
 
-Question 4
-
+### Question 4
+#### 	Hedging
 Before deciding on the index fund to use for hedging, we ran OLS regression of our portfolio against three index funds (VGT, S&P 500 and IYW) to determine which index fund was the most highly correlated with our portfolio.
 
 ![image](https://user-images.githubusercontent.com/71431944/157257280-31c109fe-7a9c-4e89-9f24-1f58bbfdcbe8.png)
@@ -83,8 +91,8 @@ The table below shows the payoff and the portfolio returns with and without hedg
 
 From the results above, we see that buying options with expiration on all three dates were not profitable as our payoffs were all 0, meaning our put options would have all expired worthless. However, among these options, hedging using the option that expires in February gave us the least decrease in percentage return (1.79%), as the option premium in February is the lowest.
 
-Question 5
-
+### Question 5
+#### Stock Forecasting 
 Input features and dependent variable
 For our independent variables we have chosen to use technical analysis indicators, relative strength indicator (RSI), simple moving average (SMA) and momentum indicator (MOM) as inputs to our model. The RSI indicator which was developed by Welles Wilder, is a momentum oscillator that is very popular in financial technical analysis [1]. We have chosen to use RSI as, in the context of forecasting financial market movements, RSI is commonly used as one of the signals to define enter and exit rules [2]. The SMA indicator is a momentum-based indicator that generates buy or sell signals depending on the direction from which the stock prices cross the moving average price [1]. We also chose to use MOM as it helps us see the movement of prices over time hence it can be useful for our stock prediction as it is a time series prediction. 
 
