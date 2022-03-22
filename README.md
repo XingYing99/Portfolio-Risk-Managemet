@@ -7,17 +7,22 @@ Comparison of returns
 The table below reports the monthly returns for each of the first 10 months of 2020.
  
 ![image](https://user-images.githubusercontent.com/71431944/157256768-078fcce9-dac7-4515-a357-785d6ea5010f.png)
+
 To compare the monthly returns in the first 10 months of 2020, we plotted the graph below. 
+
 ![image](https://user-images.githubusercontent.com/71431944/157256821-bbb2387a-b59d-44c4-9f23-31b2387002e1.png)
+
 From the graph, we can see that the best, worst and our optimal portfolio had similar peaks and troughs. At the peaks in April and around August, the best portfolio outperformed the worst portfolio. Our optimal portfolio log returns are comparable to that of the best portfolio at the peaks. At the trough in March, the worst portfolio performed the best with the lowest drop in returns, while our optimal portfolio performed the worst. However, at the troughs in June and September, our optimal portfolio outperformed the worst portfolio and the other 2 portfolios respectively.
 
 In October, after subjective adjustment, our portfolio achieved -0.052905 log returns, which is an improvement compared to our portfolio before subjective adjustment. 
 Comparison of risk
 
 The table below shows the annualised standard deviation for the first 10 months of 2020. 
+
  ![image](https://user-images.githubusercontent.com/71431944/157257028-75c2c189-8f19-46a6-bbe7-0786345d3662.png)
 
 The graph below compares the annualised standard deviation by daily return in each month for the first 10 months of 2020. 
+
  ![image](https://user-images.githubusercontent.com/71431944/157257041-f58b14bd-9973-469c-853c-0e8734b2cb52.png)
 
 Similar to the monthly returns graph, the annualised standard deviations of the 3 portfolios showed similar peaks and troughs. The annualised standard deviation for our optimal portfolio was the highest among the 3 portfolios for the first half of 2020. The annualised standard deviation of our optimal portfolio was the lowest between June to August. From August to October, the annualised standard deviation of the best portfolio was the highest, while that of the worst portfolio was the lowest. 
@@ -68,10 +73,12 @@ Question 4
 Before deciding on the index fund to use for hedging, we ran OLS regression of our portfolio against three index funds (VGT, S&P 500 and IYW) to determine which index fund was the most highly correlated with our portfolio.
 
 ![image](https://user-images.githubusercontent.com/71431944/157257280-31c109fe-7a9c-4e89-9f24-1f58bbfdcbe8.png)
+
 From our OLS regression, we found that the R-squared and adjusted R-squared was the highest when our portfolio was regressed against VGT. This shows that our portfolio was most correlated with VGT and hence we chose VGT as the index fund for hedging. As verification, we calculated the correlation between our portfolio and VGT using the CAPM beta formula correlation = (beta*(sd_index))/sd_portfolio, and obtained a correlation of 0.965, showing that our portfolio was indeed highly correlated with the index fund VGT.
 Since the goal is to improve risk-adjusted return and hedge against a drop in portfolio value, we would be buying put options. We chose 21 Feb 2020 as the expiration date for the options we wanted to buy, and we bought put options at strike price 240 as it was the closest to our estimated strike price of 238.60.
 
 The table below shows the payoff and the portfolio returns with and without hedging. We see that hedging did not improve our percentage returns for our optimal portfolio as our put options expire worthless. This is because the price of VGT actually increased to 262.38 on 21 Feb 2020, hence we did not profit from buying the options. The portfolio return after hedging also decreased after accounting for the cost of buying the options.  
+
 ![image](https://user-images.githubusercontent.com/71431944/157257356-04a57fad-2500-4325-a682-d6f2d9e96489.png)
 
 From the results above, we see that buying options with expiration on all three dates were not profitable as our payoffs were all 0, meaning our put options would have all expired worthless. However, among these options, hedging using the option that expires in February gave us the least decrease in percentage return (1.79%), as the option premium in February is the lowest.
